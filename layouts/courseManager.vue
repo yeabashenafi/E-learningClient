@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <app-header />
-    <app-side-bar />
+    <course-manager-side-bar />
     <v-main>
       <v-container>
         <Nuxt />
@@ -12,14 +12,10 @@
 
 <script>
 import AppHeader from '@/components/AppHeader.vue'
-import AppSideBar from '@/components/AppSideBar.vue'
+import CourseManagerSideBar from '~/components/CourseManagerSideBar.vue'
 export default {
   name: 'NavLayout',
-  components: { AppHeader, AppSideBar },
-  // comments: {
-  //   AppHeader,
-  //   AppSideBar
-  // },
+  components: { AppHeader, CourseManagerSideBar },
   data() {
     return {}
   },
