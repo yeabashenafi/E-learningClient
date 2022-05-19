@@ -24,8 +24,15 @@ export default {
     login() {
       this.$refs.login_form.submit()
     },
-    onLoginSucess({ data }) {
-      const roles = data.roles.map((role) => role.toLowerCase())
+    onLoginSucess(data) {
+      const roles = data.roles.map((role) => {
+        const tempRole = role.split('_')
+        return tempRole.length > 1
+          ? `${tempRole[0].toLowerCase()}${tempRole[1].slice(0, 1)}${tempRole[1]
+              .slice(1)
+              .toLowerCase()}`
+          : role.toLowerCase()
+      })
       const id = data.id
 
       this.$router.push({ path: `${roles[0]}/${id}`, params: { id } })
