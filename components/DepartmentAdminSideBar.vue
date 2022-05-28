@@ -29,9 +29,9 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: 'Home', icon: 'mdi-home-city' },
-        { title: 'My Account', icon: 'mdi-account' },
-        { title: 'Users', icon: 'mdi-account-group-outline' },
+        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+        { title: 'Classes', icon: 'mdi-home-city' },
+        { title: 'Students', icon: 'mdi-account-group-outline' },
       ],
       mini: true,
     }

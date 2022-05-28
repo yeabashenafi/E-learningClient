@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <app-header />
-    <app-side-bar />
-    <v-main>
+    <department-admin-side-bar />
+    <v-main class="grey lighten-4">
       <v-container>
         <Nuxt />
       </v-container>
@@ -12,14 +12,11 @@
 
 <script>
 import AppHeader from '@/components/AppHeader.vue'
-import AppSideBar from '@/components/AppSideBar.vue'
+import DepartmentAdminSideBar from '@/components/DepartmentAdminSideBar.vue'
 export default {
-  name: 'NavLayout',
-  components: { AppHeader, AppSideBar },
-  // comments: {
-  //   AppHeader,
-  //   AppSideBar
-  // },
+  name: 'DepartmentAdminLayout',
+  components: { AppHeader, DepartmentAdminSideBar },
+
   data() {
     return {}
   },
